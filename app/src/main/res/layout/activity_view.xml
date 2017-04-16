@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.daiban.kunationallibrary.View">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="427dp"
+        android:layout_weight="0.76">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                app:srcCompat="@android:drawable/alert_light_frame" />
+
+            <TextView
+                android:id="@+id/Btitle"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Title" />
+
+            <TextView
+                android:id="@+id/BAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="Author" />
+
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:text="Descriptio" />
+
+            <TextView
+                android:id="@+id/keywords"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="Key Words" />
+
+            <TextView
+                android:id="@+id/Availability"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="Available?  where ? " />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:text="Borrow Item" />
+
+</LinearLayout>
