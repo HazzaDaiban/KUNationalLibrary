@@ -14,7 +14,7 @@
         android:layout_weight="0.20" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/STitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Search For An Item"

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Nuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New username" />
+
+    <EditText
+        android:id="@+id/NTuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/Npass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New password" />
+
+    <EditText
+        android:id="@+id/NTpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+</LinearLayout>
