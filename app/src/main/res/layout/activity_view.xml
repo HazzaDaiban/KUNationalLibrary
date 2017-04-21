@@ -42,22 +42,15 @@
                 android:text="Author" />
 
             <TextView
-                android:id="@+id/Description"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:text="Descriptio" />
-
-            <TextView
-                android:id="@+id/keywords"
-                android:layout_width="match_parent"
-                android:layout_height="28dp"
-                android:text="Key Words" />
-
-            <TextView
                 android:id="@+id/Availability"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:text="Available?  where ? " />
+
+            <TextView
+                android:id="@+id/branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
