@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25" />
+
+    <TextView
+        android:id="@+id/Text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/Uname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Passward"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/Upassward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/Text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number :"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/Umobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Borrowed Books : "
+        android:textColor="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_weight="0.11">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/Book1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BN1"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:text="Britannica" />
+
+                <TextView
+                    android:id="@+id/DL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 Days left "
+                    android:textColor="@android:color/holo_green_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Book2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BN2"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:text="1001 Innovations" />
+
+                <TextView
+                    android:id="@+id/DL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Days left "
+                    android:textColor="@android:color/holo_green_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Book3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BN3"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:text="الرحيق المختوم"
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/DL3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overdue"
+                    android:textColor="@android:color/holo_red_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Book4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BN4"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:text="كيسيبيديا"
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/DL4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Returned" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Book5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BN5"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:text="Software Engineering  "
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/DL5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Returned" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Requists : "
+        android:textColor="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="94dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/RB1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Rbook1"
+                        android:layout_width="184dp"
+                        android:layout_height="wrap_content"
+                        android:text="زوجة واحدة لا تكفي"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/S1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rejected"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RB2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Rbook2"
+                        android:layout_width="184dp"
+                        android:layout_height="wrap_content"
+                        android:text="Java For Dummies " />
+
+                    <TextView
+                        android:id="@+id/S2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Approved"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit" />
+
+</LinearLayout>

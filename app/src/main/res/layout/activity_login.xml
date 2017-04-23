@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
@@ -18,7 +19,7 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.29" />
+        android:layout_weight="0.11" />
 
     <TextView
         android:id="@+id/main"
@@ -55,7 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/Rb"
@@ -64,6 +66,10 @@
                 android:layout_gravity="end"
                 android:onClick="Reg"
                 android:text="Register" />
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="23dp" />
 
             <Button
                 android:id="@+id/Sb"
