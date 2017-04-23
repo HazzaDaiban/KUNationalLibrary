@@ -30,6 +30,7 @@ public class SearchPage extends AppCompatActivity {
     private TextView STitle;
     private EditText Btitle, Bauthor, keywords;
     private Button search;
+    private String mobilenum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class SearchPage extends AppCompatActivity {
         Bauthor = (EditText) findViewById(R.id.Bauthor);
         keywords = (EditText) findViewById(R.id.Keywords);
         search = (Button) findViewById(R.id.search);
+        mobRequest();
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,6 +104,9 @@ public class SearchPage extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.profile) {
             Intent intent = new Intent(SearchPage.this, Profile.class);
+            intent.putExtra("User", getIntent().getStringExtra("Username"));
+            intent.putExtra("Pass", getIntent().getStringExtra("Password"));
+            intent.putExtra("Mob", mobilenum);
             startActivity(intent);
             return true;
         }
@@ -134,5 +139,30 @@ public class SearchPage extends AppCompatActivity {
         AlertDialog alert11 = builder1.create();
         alert11.show();
 
+    }
+    private void mobRequest(){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://kulibnational.000webhostapp.com/mobreq.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        mobilenum=response;
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(SearchPage.this, "error fetching mobile number", Toast.LENGTH_LONG).show();
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("user",getIntent().getStringExtra("Username"));
+                params.put("pass",getIntent().getStringExtra("Password"));
+                return params;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 }

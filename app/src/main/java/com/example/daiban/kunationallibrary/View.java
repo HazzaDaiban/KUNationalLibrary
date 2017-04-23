@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +21,12 @@ import java.util.Map;
 
 public class View extends AppCompatActivity {
 private TextView Btitle, BAuthor, Availability, branch;
-
+private Button Borrow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
+        Borrow = (Button) findViewById(R.id.button);
         Btitle = (TextView) findViewById(R.id.Btitle);
         branch = (TextView) findViewById(R.id.branch);
         BAuthor = (TextView) findViewById(R.id.BAuthor);
@@ -58,6 +60,12 @@ private TextView Btitle, BAuthor, Availability, branch;
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+        Borrow.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(android.view.View v) {
+                Toast.makeText(View.this,"Item has been booked please proceed to the branch",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     //Action bar icon

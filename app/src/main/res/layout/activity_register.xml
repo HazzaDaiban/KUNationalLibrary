@@ -28,4 +28,19 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content"
     android:ems="10"
     android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/Nmobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile number" />
+
+    <EditText
+        android:id="@+id/NTmobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="050XXXXXXX"
+        android:inputType="number"
+        android:phoneNumber="false" />
+
 </LinearLayout>
